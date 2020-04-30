@@ -7,6 +7,11 @@ class Simple_Robot {
 	void sayExperienceAndName() {
 		System.out.println(name + " has " + experience + " years of experience!");
 	}
+	// random function works successfully
+	int averageYearsofExperience(int random1) {
+		random1 = (int)(Math.random()*5); // an int function requires (int)
+		return random1;
+	}
 
 	void rip() {
 		System.out.println("I hope Robot " + name + " brought you some joy in your current moment!");
@@ -50,6 +55,15 @@ public class Actions {
 					System.out.println("Command not recognized!");
 				}
 			}
+		}
+		
+		// testing random functions so I can add it to make this app better
+		boolean test1 = false;
+		if (test1 == true) {
+			int random = 0;
+			System.out.println(John.averageYearsofExperience(random));
+			// void means that it automatically prints the stored values in class
+			
 		}
 
 	}
