@@ -18,6 +18,22 @@ class Simple_Robot {
 		System.out.println("I hope Robot " + name + " brought you some joy in your current moment!");
 	}
 }
+class robot_price {
+	String name, experience, type;
+	int price, price_inflation, demand;
+	// Random names will show up for robots and random prices between $300 and $10,000 will be listed!
+	
+	void robot_buyer_info() {
+		System.out.println("I found out that you are interested in buying a robot!" 
+				+ "\nIn my inventory, I only have one robot available!");
+	}
+	
+	void robot_buyer() {
+		
+		System.out.println("The robot's name is " + name + " and the price is " + '$' + price + '.');
+		
+	}
+}
 
 class User_And_Robot_Algorithms {
 	// keywords for the word Robot
@@ -216,6 +232,14 @@ public class Actions {
 			System.out.print("Random word: ");
 			dog.name1();
 
+		} else if (continue1.contentEquals("buy")) {
+			robot_price good_robot = new robot_price();
+			good_robot.robot_buyer_info();
+			System.out.println("Please enter the choice of your robot's name: ");
+			String robot_name = Robot101.next();
+			good_robot.name = robot_name;
+			good_robot.price = (int)(Math.random()*10000);
+			good_robot.robot_buyer();
 		}
 
 	}
